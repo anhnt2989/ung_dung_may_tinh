@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Improved Calculator</title>
+</head>
+<script>
+    function dis(giatri)
+    {
+        document.getElementById("result").value+=giatri;
+    }
+    function tinh()
+    {
+        let x = document.getElementById("result").value;
+        let y = eval(x);
+        document.getElementById("result").value = y;
+    }
+    function c()
+    {
+        document.getElementById("result").value = "";
+    }
+    function sin()
+    {
+        let s = document.getElementById("result").value;
+        let k = Math.sin(s);
+        document.getElementById("result").value = k;
+    }
+    function cos()
+    {
+        let cs = document.getElementById("result").value;
+        let k1 = Math.cos(cs);
+        document.getElementById("result").value = k1;
+    }
+    function tan()
+    {
+        let tn = document.getElementById("result").value;
+        let k2 = Math.tan(tn);
+        document.getElementById("result").value = k2;
+    }
+    function sqrt()
+    {
+        let sq = document.getElementById("result").value;
+        let k3 = Math.sqrt(sq);
+        document.getElementById("result").value = k3;
+    }
+</script>
+<style>
+    input[type="text"]
+    {
+        background-color:wheat;
+        border: solid black 2px;
+        width:96%
+    }
+    input[type="button"]
+    {
+        background-color:orange;
+        width:100%;
+    }
+    #kq{
+        height: 45px;
+        background-color: green;
+    }
+    #rs{
+        background-color: red;
+    }
+</style>
+<body>
+<table type="table" border="1">
+    <tr>
+        <td colspan="4"><input type="text" id="result"></td>
+        <td><input id="rs" type="button" value="C" onclick="c()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="dis('7')"/> </td>
+        <td><input type="button" value="8" onclick="dis('8')"/> </td>
+        <td><input type="button" value="9" onclick="dis('9')"/> </td>
+        <td><input type="button" value="÷" onclick="dis('/')"/> </td>
+        <td><input id="sin" type="button" value="sin" onclick="sin()"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="dis('4')"/> </td>
+        <td><input type="button" value="5" onclick="dis('5')"/> </td>
+        <td><input type="button" value="6" onclick="dis('6')"/> </td>
+        <td><input type="button" value="x" onclick="dis('*')"/> </td>
+        <td><input id="cos" type="button" value="cos" onclick="cos()"/></td>
+
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="dis('1')"/> </td>
+        <td><input type="button" value="2" onclick="dis('2')"/> </td>
+        <td><input type="button" value="3" onclick="dis('3')"/> </td>
+        <td><input type="button" value="-" onclick="dis('-')"/> </td>
+        <td><input id="tan" type="button" value="tan" onclick="tan()"/></td>
+
+    </tr>
+    <tr>
+        <td><input type="button" value="." onclick="dis('.')"/> </td>
+        <td><input type="button" value="0" onclick="dis('0')"/> </td>
+        <td><input type="button" value="," onclick="dis(',')"/> </td>
+        <td><input type="button" value="+" onclick="dis('+')"/> </td>
+        <td rowspan="2"><input id="kq" type="button" value="=" onclick="tinh()"/></td>
+
+    </tr>
+    <tr>
+        <td><input type="button" value="×ˣ" onclick="dis('**')"/> </td>
+        <td><input type="button" value="√" onclick="sqrt()"/></td>
+        <td><input type="button" value="(" onclick="dis('(')"/></td>
+        <td><input type="button" value=")" onclick="dis(')')"/></td>
+    </tr>
+</table>
+</body>
+</html>
