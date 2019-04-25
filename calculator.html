@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <br><br>
+    <button type="button" style="background-color:blue" onclick="cong()">Addition(+)</button>
+    <script>
+        function cong() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            kq=parseFloat(n1)+parseFloat(n2);
+            document.getElementById("ketqua").innerText =  "Addition = " + kq;
+        }
+    </script>
+    <button type="button" style="background-color: red" onclick="tru()">Substraction(-)</button>
+    <script>
+        function tru() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            kq=parseFloat(n1)-parseFloat(n2);
+            document.getElementById("ketqua").innerText =  "Substraction = " + kq;
+        }
+    </script>
+    <button type="button" style="background-color: blueviolet" onclick="nhan()">Multiplication(x)</button>
+    <script>
+        function nhan() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            kq=parseFloat(n1)*parseFloat(n2);
+            document.getElementById("ketqua").innerText =  "Multiplication = " + kq;
+        }
+    </script>
+    <button type="button" style="background-color:gold" onclick="chia()">Division(/)</button>
+    <script>
+        function chia() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            kq=parseFloat(n1)/parseFloat(n2);
+            document.getElementById("ketqua").innerText =  "Division = " + kq;
+        }
+    </script>
+    <br><br>
+    <font color="blue">Result :          <span id="ketqua"></span></font>
+
+</form>
+</body>
+</html>
